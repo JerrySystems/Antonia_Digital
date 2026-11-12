@@ -1,0 +1,21 @@
+{
+  "name": "Antonia Huesca Arce | Lavado de Autos",
+  "short_name": "Lavado de Autos",
+  "description": "Tarjeta digital de Antonia Huesca Arce — Lavado de Autos. El mejor Servicio con tu Servidora.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#12070A",
+  "theme_color": "#12070A",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "avatar.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
