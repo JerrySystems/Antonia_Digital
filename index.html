@@ -9,16 +9,16 @@
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Antonia Huesca Arce | Lavado de Autos">
 <meta property="og:description" content="El mejor Servicio con tu Servidora — Guarda mi contacto, consulta nuestros servicios o cotiza por WhatsApp.">
-<meta property="og:image" content="https://jerrysystems.github.io/tarjeta/og-image.png">
+<meta property="og:image" content="https://jerrysystems.github.io/Antonia_Digital/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://jerrysystems.github.io/tarjeta/">
+<meta property="og:url" content="https://jerrysystems.github.io/Antonia_Digital/">
 <meta property="profile:first_name" content="Antonia">
 <meta property="profile:last_name" content="Huesca Arce">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Antonia Huesca Arce | Lavado de Autos">
 <meta name="twitter:description" content="El mejor Servicio con tu Servidora">
-<meta name="twitter:image" content="https://jerrysystems.github.io/tarjeta/og-image.png">
+<meta name="twitter:image" content="https://jerrysystems.github.io/Antonia_Digital/og-image.png">
 
 <meta name="theme-color" content="#12070A">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="canonical" href="https://jerrysystems.github.io/tarjeta/">
+<link rel="canonical" href="https://jerrysystems.github.io/Antonia_Digital/">
 
 <style>
 :root{
@@ -345,9 +345,9 @@ footer{text-align:center;padding-top:4px}
       <span class="ico"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 8.1 5.6a1.6 1.6 0 0 0 1.8 0L21 7"/></svg></span>
       Correo<small>antonia.huesca.arce@gmail.com</small>
     </a>
-    <a class="tile" href="https://jerrysystems.github.io/tarjeta/" target="_blank" rel="noopener">
+    <a class="tile" href="https://jerrysystems.github.io/Antonia_Digital/" target="_blank" rel="noopener">
       <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span>
-      Sitio web<small>jerrysystems.github.io/tarjeta</small>
+      Sitio web<small>jerrysystems.github.io/Antonia_Digital</small>
     </a>
   </section>
 
@@ -358,7 +358,7 @@ footer{text-align:center;padding-top:4px}
       <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
     </summary>
     <div class="qr-body">
-      <div class="qr-box" id="qrContainer" aria-label="Código QR de la tarjeta digital de Antonia Huesca Arce"></div>
+      <div class="qr-box"><img src="qr-card.png" alt="Código QR de la tarjeta digital de Antonia Huesca Arce" width="200" height="200"></div>
       <p>Escanea este código QR con la cámara de tu teléfono para abrir la tarjeta digital y guardar el contacto al instante.</p>
     </div>
   </details>
@@ -370,7 +370,7 @@ footer{text-align:center;padding-top:4px}
     </button>
     <p class="copy">
       © 2026 Lavado de Autos · Sucursal Justo a Tiempo<br>
-      Puebla, México · <a href="https://jerrysystems.github.io/tarjeta/">jerrysystems.github.io/tarjeta</a>
+      Puebla, México · <a href="https://jerrysystems.github.io/Antonia_Digital/">jerrysystems.github.io/Antonia_Digital</a>
     </p>
   </footer>
 </div>
@@ -482,165 +482,12 @@ footer{text-align:center;padding-top:4px}
   modal.addEventListener("click",function(e){if(e.target===modal)closeModal();});
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.classList.contains("open"))closeModal();});
 
-  // --- Generador autónomo de Código QR (sin dependencias externas) ---
-  (function renderQR(text,container){
-    // Implementación compacta de QR Code Byte Mode (versión automática 1-6, ECC M)
-    var QR=(function(){
-      var EXP=new Array(256),LOG=new Array(256);
-      for(var i=0;i<8;i++)EXP[i]=1<<i;
-      for(var i=8;i<256;i++)EXP[i]=EXP[i-4]^EXP[i-5]^EXP[i-6]^EXP[i-8];
-      for(var i=0;i<255;i++)LOG[EXP[i]]=i;
-      function gmul(a,b){return(a===0||b===0)?0:EXP[(LOG[a]+LOG[b])%255];}
-      function gpoly(ecLen){
-        var p=[1];
-        for(var i=0;i<ecLen;i++){
-          var next=new Array(p.length+1).fill(0);
-          for(var j=0;j<p.length;j++){
-            next[j]^=p[j];
-            next[j+1]^=gmul(p[j],EXP[i]);
-          }
-          p=next;
-        }
-        return p;
-      }
-      function rsEncode(data,ecLen){
-        var gen=gpoly(ecLen),res=data.concat(new Array(ecLen).fill(0));
-        for(var i=0;i<data.length;i++){
-          var coef=res[i];
-          if(coef!==0){
-            for(var j=0;j<gen.length;j++)res[i+j]^=gmul(gen[j],coef);
-          }
-        }
-        return res.slice(data.length);
-      }
-      // Tabla ECC-M para versiones 1..6: [totalCodewords, ecPerBlock, numBlocks, alignPos]
-      var VERS=[
-        null,
-        [26,10,1,[]],
-        [44,16,1,[6,18]],
-        [70,26,1,[6,22]],
-        [100,18,2,[6,26]],
-        [134,24,2,[6,30]],
-        [172,16,4,[6,34]]
-      ];
-      function make(str){
-        var bytes=[];
-        for(var i=0;i<str.length;i++){
-          var c=str.charCodeAt(i);
-          if(c<128)bytes.push(c);
-          else if(c<2048){bytes.push(192|(c>>6),128|(c&63));}
-          else{bytes.push(224|(c>>12),128|((c>>6)&63),128|(c&63));}
-        }
-        var ver=1;
-        for(;ver<=6;ver++){
-          var cap=VERS[ver][0]-VERS[ver][1]*VERS[ver][2]-2;
-          if(bytes.length<=cap)break;
-        }
-        var totalCW=VERS[ver][0],ecLen=VERS[ver][1],blocks=VERS[ver][2],align=VERS[ver][3];
-        var dataCW=totalCW-ecLen*blocks;
-        var bits=[];
-        function pushBits(val,len){for(var b=len-1;b>=0;b--)bits.push((val>>b)&1);}
-        pushBits(4,4); // Byte mode
-        pushBits(bytes.length,8);
-        bytes.forEach(function(b){pushBits(b,8);});
-        pushBits(0,Math.min(4,dataCW*8-bits.length));
-        while(bits.length%8!==0)bits.push(0);
-        var cw=[];
-        for(var i=0;i<bits.length;i+=8){
-          var v=0;for(var j=0;j<8;j++)v=(v<<1)|bits[i+j];
-          cw.push(v);
-        }
-        var pads=[0xEC,0x11],pi=0;
-        while(cw.length<dataCW){cw.push(pads[pi]);pi^=1;}
-        // Interleave blocks
-        var dBlocks=[],eBlocks=[],idx=0,baseLen=Math.floor(dataCW/blocks),extra=dataCW%blocks;
-        for(var b=0;b<blocks;b++){
-          var len=baseLen+(b>=blocks-extra?1:0);
-          var slice=cw.slice(idx,idx+len);idx+=len;
-          dBlocks.push(slice);
-          eBlocks.push(rsEncode(slice,ecLen));
-        }
-        var stream=[];
-        for(var i=0;i<baseLen+1;i++)for(var b=0;b<blocks;b++)if(i<dBlocks[b].length)stream.push(dBlocks[b][i]);
-        for(var i=0;i<ecLen;i++)for(var b=0;b<blocks;b++)stream.push(eBlocks[b][i]);
-
-        var size=ver*4+17;
-        var mat=Array.from({length:size},function(){return new Array(size).fill(null);});
-        var isFunc=Array.from({length:size},function(){return new Array(size).fill(false);});
-        function setMod(r,c,v){mat[r][c]=v?1:0;isFunc[r][c]=true;}
-        function finder(r,c){
-          for(var dr=-1;dr<=7;dr++)for(var dc=-1;dc<=7;dc++){
-            var rr=r+dr,cc=c+dc;
-            if(rr<0||rr>=size||cc<0||cc>=size)continue;
-            var on=(dr>=0&&dr<=6&&(dc===0||dc===6))||(dc>=0&&dc===6&&(dr===0||dr===6))||(dr>=2&&dr<=4&&dc>=2&&dc<=4);
-            setMod(rr,cc,on);
-          }
-        }
-        finder(0,0);finder(0,size-7);finder(size-7,0);
-        if(align.length){
-          for(var i=0;i<align.length;i++)for(var j=0;j<align.length;j++){
-            var r=align[i],c=align[j];
-            if(isFunc[r][c])continue;
-            for(var dr=-2;dr<=2;dr++)for(var dc=-2;dc<=2;dc++){
-              setMod(r+dr,c+dc,Math.abs(dr)===2||Math.abs(dc)===2||(dr===0&&dc===0));
-            }
-          }
-        }
-        for(var i=8;i<size-8;i++){if(!isFunc[6][i])setMod(6,i,i%2===0);if(!isFunc[i][6])setMod(i,6,i%2===0);}
-        setMod(size-8,8,1);
-        // Reserve format info
-        for(var i=0;i<9;i++){if(i!==6){isFunc[8][i]=true;isFunc[i][8]=true;}}
-        for(var i=0;i<8;i++){isFunc[8][size-1-i]=true;isFunc[size-1-i][8]=true;}
-
-        // Place data bits
-        var sBits=[];
-        stream.forEach(function(b){for(var k=7;k>=0;k--)sBits.push((b>>k)&1);});
-        var bi=0,up=true;
-        for(var col=size-1;col>0;col-=2){
-          if(col===6)col--;
-          for(var step=0;step<size;step++){
-            var row=up?(size-1-step):step;
-            for(var dx=0;dx<2;dx++){
-              var cc=col-dx;
-              if(!isFunc[row][cc]){
-                var bit=bi<sBits.length?sBits[bi++]:0;
-                // Mask 0: (row + col) % 2 === 0
-                if((row+cc)%2===0)bit^=1;
-                mat[row][cc]=bit;
-              }
-            }
-          }
-          up=!up;
-        }
-        // Format info for ECC M (00) + Mask 0 (000) -> 0x5412
-        var fmt=0x5412;
-        for(var i=0;i<6;i++)mat[8][i]=(fmt>>i)&1;
-        mat[8][7]=(fmt>>6)&1;mat[8][8]=(fmt>>7)&1;mat[7][8]=(fmt>>8)&1;
-        for(var i=9;i<15;i++)mat[14-i][8]=(fmt>>i)&1;
-        for(var i=0;i<8;i++)mat[size-1-i][8]=(fmt>>i)&1;
-        for(var i=8;i<15;i++)mat[8][size-15+i]=(fmt>>(i))&1;
-        return mat;
-      }
-      return {make:make};
-    })();
-
-    var m=QR.make(text),n=m.length,rects="";
-    for(var r=0;r<n;r++){
-      for(var c=0;c<n;c++){
-        if(m[r][c])rects+='<rect x="'+c+'" y="'+r+'" width="1" height="1"/>';
-      }
-    }
-    container.innerHTML='<svg viewBox="0 0 '+n+' '+n+'" shape-rendering="crispEdges" role="img" aria-label="Código QR">'+
-      '<rect width="'+n+'" height="'+n+'" fill="#ffffff"/>'+
-      '<g fill="#881337">'+rects+'</g></svg>';
-  })("https://jerrysystems.github.io/tarjeta/",document.getElementById("qrContainer"));
-
   // --- Compartir de forma nativa, con respaldo de copiado ---
   var share=document.getElementById("shareBtn");
   share.addEventListener("click",function(){
     var data={title:"Antonia Huesca Arce | Lavado de Autos",
               text:"El mejor Servicio con tu Servidora — consulta nuestra tarjeta digital y precios:",
-              url:"https://jerrysystems.github.io/tarjeta/"};
+              url:"https://jerrysystems.github.io/Antonia_Digital/"};
     if(navigator.share){navigator.share(data).catch(function(){});return;}
     var done=function(){say("Enlace copiado")};
     if(navigator.clipboard&&navigator.clipboard.writeText){
